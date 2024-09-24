@@ -1,0 +1,105 @@
+/* General page structure to use full screen */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Full screen for quiz and results container */
+  .quiz-container, .results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Font size increased for questions */
+  .question-container {
+    width: 80%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 1.5rem; /* Increased font size for questions */
+  }
+  
+  .answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .answers button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px; /* Increased padding for larger buttons */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Increased font size for answer options */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .answers button:hover {
+    background-color: #0056b3;
+  }
+  
+  .timer {
+    font-size: 1.5rem; /* Increased font size for the timer */
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .question-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .answers button {
+      max-width: 250px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .answers button {
+      max-width: 200px;
+    }
+  
+    .timer {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Light color gradients for the results page */
+  .results-container {
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+    font-size: 1.7rem; /* Increased font size for results page */
+  }
+  
+  .results-container p {
+    font-size: 1.5rem; /* Adjust font size for score text */
+  }
+  
